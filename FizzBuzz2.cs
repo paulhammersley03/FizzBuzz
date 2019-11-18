@@ -10,29 +10,26 @@ namespace fizz_buzz
     {
         static void Main()
         {
-            //0-100 Counter
             for (int i = 1; i <= 250; i++)
-            //Make String Fizz or Buzz
             {
-            //Blank String to Build Up
-            string Builder = "";               
+                string Builder = "";               
                 if (i % 3 == 0)
                     Builder += "Fizz";
-
                 if (i % 5 == 0)
                     Builder += "Buzz";
-
                 if (i % 7 == 0)
                     Builder += "Bang";
-
                 if (i % 11 == 0)
-                    Builder = "Bong";
-
-                if (Builder.Length > 0)
+                    Builder = "Bong";               
+                if (i % 13 == 0)
+                    Builder = "Fezz";
+                    string[] Split = Builder.Split('B');
+                    foreach (var word in Split)
+                    if (Builder.Length > 0)
                     Console.WriteLine(Builder);
                 else Console.WriteLine(i);                               
             }
-            {
+            {                
                 Console.ReadLine();
             }
         }
